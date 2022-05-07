@@ -3,7 +3,7 @@ import { json } from 'body-parser';
 import cors from 'cors';
 import CampeonRepository from './CampeonRepository';
 import respond from './respond';
-import Campeon from './Campeon';
+import Campeon from './domain-layer/entities/Campeon';
 
 const app = express();
 

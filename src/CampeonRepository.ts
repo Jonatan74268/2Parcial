@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import IRepository from './IRepository';
-import Campeon from './Campeon';
+import Campeon from './domain-layer/entities/Campeon';
 
 export default class CampeonRepository implements IRepository<Campeon> {
   private campeones: Campeon[] = [];
