@@ -19,7 +19,7 @@ export default class CampeonRepository implements IRepository<Campeon> {
     return this.campeones;
   }
 
-  public get(id: string): Campeon {
+  public get(id: number): Campeon {
     return <Campeon>this.campeones.find((campeones) => campeones.id === id);
   }
 
@@ -48,7 +48,7 @@ export default class CampeonRepository implements IRepository<Campeon> {
     return entity;
   }
 
-  public delete(id: string): void {
+  public delete(id: number): void {
     this.campeones = this.campeones.reduce(
       (accumulation: Campeon[], currentCampeon) => {
         if (currentCampeon.id !== id) {

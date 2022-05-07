@@ -32,8 +32,8 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export default class Campeon {
-  @PrimaryGeneratedColumn({ type: 'varchar', length: 3, nullable: false })
-  public id: string;
+  @PrimaryGeneratedColumn({ type: 'int', unsigned: true, zerofill: true })
+  public id: number;
 
   @Column({ type: 'varchar', length: 10, nullable: false })
   public nombre: string;
@@ -42,7 +42,7 @@ export default class Campeon {
   public alias: string;
 
   @Column({ type: 'varchar', length: 10, nullable: false })
-  public roll: string;
+  public rol: string;
   
   @Column({ type: 'varchar', length: 10, nullable: false })
   public dificultad: string;
@@ -53,11 +53,11 @@ export default class Campeon {
   @Column({ type: 'varchar', length: 10000, nullable: false })
   public imagen: string;
 
-  public constructor(id: number, nombre: string, alias: string, roll: string, dificultad: string, historia: string, imagen: string) {
+  public constructor(id: number, nombre: string, alias: string, rol: string, dificultad: string, historia: string, imagen: string) {
     this.id = id;
     this.nombre = nombre;
     this.alias = alias;
-    this.roll = roll;
+    this.rol = rol;
     this.dificultad = dificultad;
     this.historia = historia;
     this.imagen = imagen;

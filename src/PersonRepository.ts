@@ -19,7 +19,7 @@ export default class PersonRepository implements IRepository<Person> {
     return this.people;
   }
 
-  public get(id: string): Person {
+  public get(id: number): Person {
     return <Person>this.people.find((person) => person.id === id);
   }
 
@@ -48,7 +48,7 @@ export default class PersonRepository implements IRepository<Person> {
     return entity;
   }
 
-  public delete(id: string): void {
+  public delete(id: number): void {
     this.people = this.people.reduce(
       (accumulation: Person[], currentPerson) => {
         if (currentPerson.id !== id) {
