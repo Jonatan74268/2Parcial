@@ -1,4 +1,4 @@
-import fs from 'fs';
+/*import fs from 'fs';
 import path from 'path';
 import IRepository from './IRepository';
 import Person from './Person';
@@ -73,3 +73,4 @@ export default class PersonRepository implements IRepository<Person> {
     fs.writeFileSync(PersonRepository.PEOPLE_FILE_PATH, peopleJson);
   }
 }
+*/

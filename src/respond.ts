@@ -1,4 +1,4 @@
-import { Response } from 'express';
+/*import { Response } from 'express';
 
 export default function respond(
   res: Response,
@@ -15,3 +15,4 @@ export default function respond(
     res.end();
   }
 }
+*/

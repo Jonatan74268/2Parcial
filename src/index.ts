@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import { json } from 'body-parser';
 import cors from 'cors';
 import CampeonRepository from './CampeonRepository';
@@ -65,4 +65,27 @@ app.delete('/campeones/:id', (req, res) => {
 
 app.listen(3000, () => {
   console.log('App started on port 3000');
+});
+*/
+
+//---------------------------------------------------------------
+import express from 'express';
+import { json } from 'body-parser';
+import 'reflect-metadata';
+import CampeonesController from './service-layer/controllers/CampeonesController';
+import InventoryInsController from './service-layer/controllers/InventoryInsController';
+
+const app = express();
+const port = 3001;
+
+app.use(json());
+
+const campeonesController = new CampeonesController();
+const inventoryInsController = new InventoryInsController();
+
+campeonesController.mount(app);
+inventoryInsController.mount(app);
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });

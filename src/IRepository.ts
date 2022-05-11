@@ -1,11 +1,11 @@
-export default interface IRepository<Model> {
-  list(): Model[];
+//export default interface IRepository<Model> {
+//  list(): Model[];
 
-  get(id: number): Model;
+//  get(id: number): Model;
 
-  add(entity: Model): Model;
+//  add(entity: Model): Model;
 
-  update(entity: Model): Model;
+//  update(entity: Model): Model;
 
-  delete(id: number): void;
-}
+//  delete(id: number): void;
+//}
